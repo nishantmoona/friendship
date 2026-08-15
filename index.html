@@ -8,31 +8,51 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+  <!-- Background Music -->
   <audio id="bgMusic" src="music/friendship.mp3" loop preload="auto"></audio>
 
+  <!-- Opening Screen -->
   <div class="start-screen" id="startScreen">
     <div class="start-card">
       <p class="small-title">A small surprise for old friends</p>
+
       <h1>Happy Friendship Day</h1>
+
       <p>
         Celebrating twenty years of friendship, school memories, laughter,
         secrets, stories, and the bond that stayed strong through time.
       </p>
-      <button id="startBtn">Open the Memories</button>
+
+      <button type="button" id="startBtn">Open the Memories</button>
     </div>
   </div>
 
+  <!-- Main Website -->
   <main class="site-content" id="siteContent">
-    <section class="hero">
+
+    <!-- Navigation -->
+    <nav class="top-nav">
+      <a href="#journey">Journey</a>
+      <a href="#featured">Featured</a>
+      <a href="#gallerySection">Gallery</a>
+      <a href="#message">Message</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
       <div class="hero-content">
         <p class="tagline">Since school days</p>
+
         <h1>Twenty Years. One Bond.</h1>
+
         <p>
           Some friendships begin in classrooms and quietly become a lifetime of memories.
           This page is for the friends who have grown together, laughed together,
@@ -40,13 +60,14 @@
         </p>
 
         <div class="hero-actions">
-          <button id="musicBtn">Pause Music</button>
-          <button id="confettiBtn">Celebrate</button>
+          <button type="button" id="musicBtn">Play Music</button>
+          <button type="button" id="confettiBtn">Celebrate</button>
         </div>
       </div>
     </section>
 
-    <section class="timeline-section">
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="journey">
       <div class="section-heading">
         <p>Our journey</p>
         <h2>From School Friends to Family</h2>
@@ -79,49 +100,73 @@
       </div>
     </section>
 
-    <section class="carousel-section">
+    <!-- Carousel Section -->
+    <section class="carousel-section" id="featured">
       <div class="section-heading">
         <p>Featured memories</p>
         <h2>Moments That Stayed With Us</h2>
       </div>
 
       <div class="carousel">
-        <button class="carousel-btn" id="prevBtn">&#10094;</button>
+        <button type="button" class="carousel-btn" id="prevBtn" aria-label="Previous memory">
+          &#10094;
+        </button>
 
         <div class="carousel-card">
-          <img id="carouselImage" src="images/friend1.jpg" alt="Friendship memory">
+          <img
+            id="carouselImage"
+            src="images/school/school1.jpg"
+            alt="Friendship memory"
+          >
+
           <div class="carousel-caption">
             <h3 id="carouselTitle">The beginning</h3>
-            <p id="carouselText">Some photos are not just pictures. They are proof that time moved, but the bond stayed.</p>
+            <p id="carouselText">
+              Some photos are not just pictures. They are proof that time moved,
+              but the bond stayed.
+            </p>
           </div>
         </div>
 
-        <button class="carousel-btn" id="nextBtn">&#10095;</button>
+        <button type="button" class="carousel-btn" id="nextBtn" aria-label="Next memory">
+          &#10095;
+        </button>
       </div>
     </section>
 
-   <section class="gallery-section">
-  <div class="section-heading">
-    <p>Memory wall</p>
-    <h2>Thirty Memories, One Friendship</h2>
-  </div>
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallerySection">
+      <div class="section-heading">
+        <p>Memory wall</p>
+        <h2>Thirty Memories, One Friendship</h2>
+      </div>
 
-  <div class="gallery-tabs">
-    <button class="gallery-tab active" data-category="all">All Photos</button>
-    <button class="gallery-tab" data-category="school">Very Old School Pictures</button>
-    <button class="gallery-tab" data-category="old">Old Pictures</button>
-  </div>
+      <div class="gallery-tabs">
+        <button type="button" class="gallery-tab active" data-category="all">
+          All Photos
+        </button>
 
-  <div class="gallery-subtitle" id="gallerySubtitle">
-    Showing all friendship memories
-  </div>
+        <button type="button" class="gallery-tab" data-category="school">
+          Very Old School Pictures
+        </button>
 
-  <div class="gallery" id="gallery"></div>
-  </section>
-    
-    <section class="message-section">
+        <button type="button" class="gallery-tab" data-category="old">
+          Old Pictures
+        </button>
+      </div>
+
+      <div class="gallery-subtitle" id="gallerySubtitle">
+        Showing all friendship memories
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message-section" id="message">
       <div class="message-card">
         <p class="small-title">A message for all of us</p>
+
         <h2>To the Friends Who Became a Part of Life</h2>
 
         <p>
@@ -142,25 +187,36 @@
           we still have memories that can make us smile instantly.
         </p>
 
-        <h3>Happy Friendship Day to the people who made school life unforgettable.</h3>
+        <h3>
+          Happy Friendship Day to the people who made school life unforgettable.
+        </h3>
       </div>
     </section>
 
+    <!-- Final Section -->
     <section class="final-section">
       <h2>Friends Since School. Friends for Life.</h2>
+
       <p>
         Thank you for being a part of this journey. Here’s to old stories,
         new memories, and a bond that stays timeless.
       </p>
-      <button id="backTopBtn">Back to Top</button>
+
+      <button type="button" id="backTopBtn">Back to Top</button>
     </section>
+
   </main>
 
+  <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
-    <span id="closeLightbox">&times;</span>
+    <button type="button" id="closeLightbox" aria-label="Close image">
+      &times;
+    </button>
+
     <img id="lightboxImage" src="" alt="Selected friendship memory">
   </div>
 
+  <!-- Confetti Canvas -->
   <canvas id="confettiCanvas"></canvas>
 
   <script src="script.js"></script>
