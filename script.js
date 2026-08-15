@@ -54,7 +54,7 @@ const oldPhotos = Array.from({ length: OLD_PHOTO_COUNT }, (_, index) => {
   const number = index + 1;
 
   return {
-    src: `images/old/old${number}.jpg`,
+    src: `images/old/Old${number}.jpg`,
     category: "old",
     caption: `Old friendship memory ${number}`
   };
@@ -84,17 +84,17 @@ const memories = [
     text: "Some laughs never become old. They only become more precious with time."
   },
   {
-    image: "images/old/old1.jpg",
+    image: "images/old/Old1.jpg",
     title: "Growing up together",
     text: "From school uniforms to real life, the journey stayed meaningful."
   },
   {
-    image: "images/old/old2.jpg",
+    image: "images/old/Old2.jpg",
     title: "Reunion moments",
     text: "No matter how much time passes, meeting again feels like yesterday."
   },
   {
-    image: "images/old/old3.jpg",
+    image: "images/old/Old3.jpg",
     title: "Friends forever",
     text: "Twenty years later, the bond still carries the warmth of school days."
   }
