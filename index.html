@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Happy Friendship Day</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <audio id="bgMusic" src="music/friendship.mp3" loop preload="auto"></audio>
+
+  <div class="start-screen" id="startScreen">
+    <div class="start-card">
+      <p class="small-title">A small surprise for old friends</p>
+      <h1>Happy Friendship Day</h1>
+      <p>
+        Celebrating twenty years of friendship, school memories, laughter,
+        secrets, stories, and the bond that stayed strong through time.
+      </p>
+      <button id="startBtn">Open the Memories</button>
+    </div>
+  </div>
+
+  <main class="site-content" id="siteContent">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="tagline">Since school days</p>
+        <h1>Twenty Years. One Bond.</h1>
+        <p>
+          Some friendships begin in classrooms and quietly become a lifetime of memories.
+          This page is for the friends who have grown together, laughed together,
+          changed together, and still stayed connected.
+        </p>
+
+        <div class="hero-actions">
+          <button id="musicBtn">Pause Music</button>
+          <button id="confettiBtn">Celebrate</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <div class="section-heading">
+        <p>Our journey</p>
+        <h2>From School Friends to Family</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <span>School</span>
+          <h3>Where it all started</h3>
+          <p>Benches, lunch boxes, punishments, jokes, and the first memories of friendship.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span>Teen Years</span>
+          <h3>Growing together</h3>
+          <p>Dreams changed, people changed, but the bond stayed familiar and real.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span>Adulthood</span>
+          <h3>Different paths, same connection</h3>
+          <p>Life became busy, but every reunion still felt like going back to school.</p>
+        </div>
+
+        <div class="timeline-item">
+          <span>20 Years</span>
+          <h3>A friendship worth celebrating</h3>
+          <p>Two decades of trust, laughter, care, and memories that cannot be replaced.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <div class="section-heading">
+        <p>Featured memories</p>
+        <h2>Moments That Stayed With Us</h2>
+      </div>
+
+      <div class="carousel">
+        <button class="carousel-btn" id="prevBtn">&#10094;</button>
+
+        <div class="carousel-card">
+          <img id="carouselImage" src="images/friend1.jpg" alt="Friendship memory">
+          <div class="carousel-caption">
+            <h3 id="carouselTitle">The beginning</h3>
+            <p id="carouselText">Some photos are not just pictures. They are proof that time moved, but the bond stayed.</p>
+          </div>
+        </div>
+
+        <button class="carousel-btn" id="nextBtn">&#10095;</button>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="section-heading">
+        <p>Memory wall</p>
+        <h2>Twenty Years in Pictures</h2>
+      </div>
+
+      <div class="gallery">
+        <div class="photo-card"><img src="images/friend1.jpg" alt="Friendship photo 1"><p>School days</p></div>
+        <div class="photo-card"><img src="images/friend2.jpg" alt="Friendship photo 2"><p>Old laughs</p></div>
+        <div class="photo-card"><img src="images/friend3.jpg" alt="Friendship photo 3"><p>Best memories</p></div>
+        <div class="photo-card"><img src="images/friend4.jpg" alt="Friendship photo 4"><p>Growing up</p></div>
+        <div class="photo-card"><img src="images/friend5.jpg" alt="Friendship photo 5"><p>Reunions</p></div>
+        <div class="photo-card"><img src="images/friend6.jpg" alt="Friendship photo 6"><p>Forever bond</p></div>
+        <div class="photo-card"><img src="images/friend7.jpg" alt="Friendship photo 7"><p>Shared stories</p></div>
+        <div class="photo-card"><img src="images/friend8.jpg" alt="Friendship photo 8"><p>Pure happiness</p></div>
+        <div class="photo-card"><img src="images/friend9.jpg" alt="Friendship photo 9"><p>Still together</p></div>
+        <div class="photo-card"><img src="images/friend10.jpg" alt="Friendship photo 10"><p>Life moments</p></div>
+        <div class="photo-card"><img src="images/friend11.jpg" alt="Friendship photo 11"><p>Old is gold</p></div>
+        <div class="photo-card"><img src="images/friend12.jpg" alt="Friendship photo 12"><p>Friends forever</p></div>
+      </div>
+    </section>
+
+    <section class="message-section">
+      <div class="message-card">
+        <p class="small-title">A message for all of us</p>
+        <h2>To the Friends Who Became a Part of Life</h2>
+
+        <p>
+          Twenty years ago, we were just school friends sitting in classrooms,
+          sharing jokes, lunch, homework, and little secrets. We did not know then
+          that those simple days would become some of the most precious memories of life.
+        </p>
+
+        <p>
+          Over the years, life changed. We grew up, took different paths, faced our own
+          struggles, built our own dreams, and became different versions of ourselves.
+          But one thing remained special — the bond we created back then.
+        </p>
+
+        <p>
+          This Friendship Day is not just about wishing each other. It is about remembering
+          the journey, respecting the bond, and feeling grateful that after all these years,
+          we still have memories that can make us smile instantly.
+        </p>
+
+        <h3>Happy Friendship Day to the people who made school life unforgettable.</h3>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <h2>Friends Since School. Friends for Life.</h2>
+      <p>
+        Thank you for being a part of this journey. Here’s to old stories,
+        new memories, and a bond that stays timeless.
+      </p>
+      <button id="backTopBtn">Back to Top</button>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <span id="closeLightbox">&times;</span>
+    <img id="lightboxImage" src="" alt="Selected friendship memory">
+  </div>
+
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
