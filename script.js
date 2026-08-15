@@ -17,6 +17,113 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const closeLightbox = document.getElementById("closeLightbox");
 
+const gallery = document.getElementById("gallery");
+const galleryTabs = document.querySelectorAll(".gallery-tab");
+const gallerySubtitle = document.getElementById("gallerySubtitle");
+
+const allPhotos = [
+  // Very old school-time pictures
+  { src: "images/school/school1.jpg", category: "school", caption: "School memory 1" },
+  { src: "images/school/school2.jpg", category: "school", caption: "School memory 2" },
+  { src: "images/school/school3.jpg", category: "school", caption: "School memory 3" },
+  { src: "images/school/school4.jpg", category: "school", caption: "School memory 4" },
+  { src: "images/school/school5.jpg", category: "school", caption: "School memory 5" },
+  { src: "images/school/school6.jpg", category: "school", caption: "School memory 6" },
+  { src: "images/school/school7.jpg", category: "school", caption: "School memory 7" },
+  { src: "images/school/school8.jpg", category: "school", caption: "School memory 8" },
+  { src: "images/school/school9.jpg", category: "school", caption: "School memory 9" },
+  { src: "images/school/school10.jpg", category: "school", caption: "School memory 10" },
+  { src: "images/school/school11.jpg", category: "school", caption: "School memory 11" },
+  { src: "images/school/school12.jpg", category: "school", caption: "School memory 12" },
+  { src: "images/school/school13.jpg", category: "school", caption: "School memory 13" },
+  { src: "images/school/school14.jpg", category: "school", caption: "School memory 14" },
+  { src: "images/school/school15.jpg", category: "school", caption: "School memory 15" },
+  { src: "images/school/school16.jpg", category: "school", caption: "School memory 16" },
+  { src: "images/school/school17.jpg", category: "school", caption: "School memory 17" },
+  { src: "images/school/school18.jpg", category: "school", caption: "School memory 18" },
+  { src: "images/school/school19.jpg", category: "school", caption: "School memory 19" },
+  { src: "images/school/school20.jpg", category: "school", caption: "School memory 20" },
+  { src: "images/school/school21.jpg", category: "school", caption: "School memory 21" },
+  { src: "images/school/school22.jpg", category: "school", caption: "School memory 22" },
+  { src: "images/school/school23.jpg", category: "school", caption: "School memory 23" },
+  { src: "images/school/school24.jpg", category: "school", caption: "School memory 24" },
+  { src: "images/school/school25.jpg", category: "school", caption: "School memory 25" },
+  { src: "images/school/school26.jpg", category: "school", caption: "School memory 26" },
+  { src: "images/school/school27.jpg", category: "school", caption: "School memory 27" },
+  
+
+  // Old pictures after school
+  { src: "images/old/old1.jpg", category: "old", caption: "Old friendship memory 1" },
+  { src: "images/old/old2.jpg", category: "old", caption: "Old friendship memory 2" },
+  { src: "images/old/old3.jpg", category: "old", caption: "Old friendship memory 3" },
+  { src: "images/old/old4.jpg", category: "old", caption: "Old friendship memory 4" },
+  { src: "images/old/old5.jpg", category: "old", caption: "Old friendship memory 5" },
+  { src: "images/old/old6.jpg", category: "old", caption: "Old friendship memory 6" },
+  { src: "images/old/old7.jpg", category: "old", caption: "Old friendship memory 7" },
+  { src: "images/old/old8.jpg", category: "old", caption: "Old friendship memory 8" },
+  { src: "images/old/old9.jpg", category: "old", caption: "Old friendship memory 9" },
+  { src: "images/old/old10.jpg", category: "old", caption: "Old friendship memory 10" },
+  { src: "images/old/old11.jpg", category: "old", caption: "Old friendship memory 11" },
+  { src: "images/old/old12.jpg", category: "old", caption: "Old friendship memory 12" },
+  { src: "images/old/old13.jpg", category: "old", caption: "Old friendship memory 13" },
+  { src: "images/old/old14.jpg", category: "old", caption: "Old friendship memory 14" },
+  { src: "images/old/old15.jpg", category: "old", caption: "Old friendship memory 15" },
+  { src: "images/old/old16.jpg", category: "old", caption: "Old friendship memory 16" },
+  { src: "images/old/old17.jpg", category: "old", caption: "Old friendship memory 17" },
+  { src: "images/old/old18.jpg", category: "old", caption: "Old friendship memory 18" }
+];
+
+function renderGallery(category = "all") {
+  if (!gallery) return;
+
+  gallery.innerHTML = "";
+
+  const filteredPhotos = category === "all"
+    ? allPhotos
+    : allPhotos.filter(photo => photo.category === category);
+
+  filteredPhotos.forEach(photo => {
+    const photoCard = document.createElement("div");
+    photoCard.className = "photo-card";
+
+    photoCard.innerHTML = `
+      <img src="${photo.src}" alt="${photo.caption}" loading="lazy">
+      <p>${photo.caption}</p>
+    `;
+
+    const image = photoCard.querySelector("img");
+
+    image.addEventListener("click", () => {
+      lightboxImage.src = photo.src;
+      lightbox.classList.add("show");
+    });
+
+    gallery.appendChild(photoCard);
+  });
+
+  if (gallerySubtitle) {
+    if (category === "school") {
+      gallerySubtitle.textContent = "Very old memories from school days";
+    } else if (category === "old") {
+      gallerySubtitle.textContent = "Old pictures from the journey after school";
+    } else {
+      gallerySubtitle.textContent = "Showing all friendship memories";
+    }
+  }
+}
+
+galleryTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    galleryTabs.forEach(item => item.classList.remove("active"));
+    tab.classList.add("active");
+
+    const category = tab.getAttribute("data-category");
+    renderGallery(category);
+  });
+});
+
+renderGallery("all");
+
 const memories = [
   {
     image: "images/friend1.jpg",
