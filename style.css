@@ -815,3 +815,15 @@ button:active {
     font-size: 0.82rem;
   }
 }
+
+.photo-card p {
+  width: fit-content;
+  margin: 12px auto 0;
+  padding: 7px 13px;
+  text-align: center;
+  color: var(--plum);
+  background: rgba(246, 200, 95, 0.28);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
