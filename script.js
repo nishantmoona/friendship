@@ -70,33 +70,48 @@ const allPhotos = [...schoolPhotos, ...oldPhotos];
 const memories = [
   {
     image: "images/school/school1.jpg",
-    title: "The beginning",
-    text: "The days when friendship was built on lunch boxes, jokes, and school benches."
-  },
-  {
-    image: "images/school/school2.jpg",
-    title: "School memories",
-    text: "The place where the bond began and the memories became permanent."
+    title: "Where It All Began",
+    text: "The first chapters of friendship were written in school corridors, classrooms, lunch breaks, and endless little jokes."
   },
   {
     image: "images/school/school3.jpg",
-    title: "Old laughs",
-    text: "Some laughs never become old. They only become more precious with time."
+    title: "School Days, Golden Days",
+    text: "Some memories never fade because they belong to the most innocent and unforgettable phase of life."
+  },
+  {
+    image: "images/school/school17.jpg",
+    title: "The Laughs We Still Remember",
+    text: "Those random laughs, silly moments, and school-time stories still feel special even after so many years."
+  },
+  {
+    image: "images/school/school24.jpg",
+    title: "Old Faces, Timeless Bond",
+    text: "These pictures hold the warmth of childhood friendships — simple, pure, and impossible to replace."
   },
   {
     image: "images/old/Old1.jpg",
-    title: "Growing up together",
-    text: "From school uniforms to real life, the journey stayed meaningful."
+    title: "Growing Up Together",
+    text: "From school uniforms to real-life journeys, the friendship kept growing through every phase of life."
   },
   {
     image: "images/old/Old2.jpg",
-    title: "Reunion moments",
-    text: "No matter how much time passes, meeting again feels like yesterday."
+    title: "Reunion That Feels Like Yesterday",
+    text: "No matter how much time passes, meeting old friends brings back the same comfort, laughter, and connection."
   },
   {
     image: "images/old/Old3.jpg",
-    title: "Friends forever",
-    text: "Twenty years later, the bond still carries the warmth of school days."
+    title: "Different Paths, Same Bond",
+    text: "Life took everyone in different directions, but the friendship stayed close to the heart."
+  },
+  {
+    image: "images/old/Old13.jpg",
+    title: "Memories Beyond Time",
+    text: "Twenty years of friendship is not just about time — it is about trust, stories, support, and countless shared moments."
+  },
+  {
+    image: "images/old/Old15.jpg",
+    title: "Friends for Life",
+    text: "Some bonds are not measured by daily conversations, but by the feeling that nothing has changed when you meet again."
   }
 ];
 
