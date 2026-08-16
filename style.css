@@ -771,3 +771,47 @@ button:active {
     font-size: 0.82rem;
   }
 }
+
+.friends-credit {
+  margin: 38px auto 8px;
+  max-width: 780px;
+  text-align: center;
+}
+
+.friends-credit p {
+  margin-bottom: 16px;
+  color: var(--rose);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.friend-name-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.friend-name-list span {
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: var(--plum);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(53, 92, 125, 0.12);
+  box-shadow: 0 10px 24px rgba(53, 92, 125, 0.1);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .friend-name-list {
+    gap: 8px;
+  }
+
+  .friend-name-list span {
+    padding: 9px 14px;
+    font-size: 0.82rem;
+  }
+}
