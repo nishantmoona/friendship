@@ -24,6 +24,13 @@ This project is designed as a digital memory scrapbook for a group of friends wh
 - Elegant color palette and typography
 - Final section with friendship message and designer credit
 
+## Technologies Used
+HTML5
+CSS3
+JavaScript
+Google Fonts
+GitHub Pages
+
 ## Folder Structure
 
 ```text
@@ -48,11 +55,3 @@ friendship-day-website/
 │
 └── music/
     └── friendship.mp3
-
-## Technologies Used
-
-HTML5
-CSS3
-JavaScript
-Google Fonts
-GitHub Pages
