@@ -40,25 +40,56 @@ let carouselTimer = null;
 const SCHOOL_PHOTO_COUNT = 27;
 const OLD_PHOTO_COUNT = 18;
 
-const schoolPhotos = Array.from({ length: SCHOOL_PHOTO_COUNT }, (_, index) => {
-  const number = index + 1;
+const schoolCaptions = [
+  "Holi Evening: 2010",
+  "Scooty Gang: 2010",
+  "Boond Chaos: 2008",
+  "Golden Memories",
+  "Summer Break",
+  "Benchmates",
+  "Innocent Days",
+  "School Smiles",
+  "Timeless Bond",
+  "Childhood Friends: 2012",
+  "Madness Faluda: 2009",
+  "Best Days",
+  "Func City Vibes",
+  "Forever Batchmates",
+  "Little Legends",
+  "Old Stories",
+  "Laughing Together",
+  "Carefree Days",
+  "Friendship Started",
+  "Classroom Crew",
+  "Sweet Memories",
+  "Unfiltered Us",
+  "First Day, First Show: 2011",
+  "Same Energy",
+  "Old Gold: 2013",
+  "Precious Times: 2014",
+  "Nepal Trip: 2014"
+];
 
-  return {
-    src: `images/school/school${number}.jpg`,
-    category: "school",
-    caption: `School memory ${number}`
-  };
-});
-
-const oldPhotos = Array.from({ length: OLD_PHOTO_COUNT }, (_, index) => {
-  const number = index + 1;
-
-  return {
-    src: `images/old/Old${number}.jpg`,
-    category: "old",
-    caption: `Old friendship memory ${number}`
-  };
-});
+const oldCaptions = [
+  "Reunion Vibes: Kodaikanal 2017",
+  "Still Together",
+  "Old Souls",
+  "Forever Us",
+  "Same Madness: Ooty 2018",
+  "Life Happened",
+  "Bond Stayed",
+  "Growing Together",
+  "Memory Lane",
+  "Years Later",
+  "Unchanged Bond",
+  "Real Friends",
+  "Timeless Connection",
+  "Old Is Gold: Wayanad 2016",
+  "Friends Forever",
+  "Beautiful Chaos",
+  "Together Again",
+  "Twenty Years"
+];
 
 const allPhotos = [...schoolPhotos, ...oldPhotos];
 
