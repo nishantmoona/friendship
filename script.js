@@ -350,11 +350,11 @@ function updateGallerySubtitle(category, count) {
   if (!gallerySubtitle) return;
 
   if (category === "school") {
-    gallerySubtitle.textContent = `Very old memories from school days`;
+    gallerySubtitle.textContent = `${count} very old memories from school days`;
   } else if (category === "old") {
-    gallerySubtitle.textContent = `Old pictures from the journey after school`;
+    gallerySubtitle.textContent = `${count} old pictures from the journey after school`;
   } else {
-    gallerySubtitle.textContent = `Showing all friendship memories`;
+    gallerySubtitle.textContent = `${count} friendship memories from school days to today`;
   }
 }
 
