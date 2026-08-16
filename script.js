@@ -91,6 +91,26 @@ const oldCaptions = [
   "Twenty Years"
 ];
 
+const schoolPhotos = Array.from({ length: SCHOOL_PHOTO_COUNT }, (_, index) => {
+  const number = index + 1;
+
+  return {
+    src: `images/school/school${number}.jpg`,
+    category: "school",
+    caption: schoolCaptions[index] || "School Days"
+  };
+});
+
+const oldPhotos = Array.from({ length: OLD_PHOTO_COUNT }, (_, index) => {
+  const number = index + 1;
+
+  return {
+    src: `images/old/Old${number}.jpg`,
+    category: "old",
+    caption: oldCaptions[index] || "Friends Forever"
+  };
+});
+
 const allPhotos = [...schoolPhotos, ...oldPhotos];
 
 
