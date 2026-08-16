@@ -827,3 +827,114 @@ button:active {
   font-size: 0.82rem;
   font-weight: 700;
 }
+
+/* ================================
+   Premium Scrapbook Background
+================================ */
+
+body {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(246, 114, 128, 0.22), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(246, 200, 95, 0.25), transparent 30%),
+    radial-gradient(circle at 18% 82%, rgba(53, 92, 125, 0.14), transparent 30%),
+    radial-gradient(circle at 82% 78%, rgba(248, 177, 149, 0.22), transparent 28%),
+    linear-gradient(135deg, #fff7ed 0%, #fff0f4 42%, #edf6ff 100%);
+  background-attachment: fixed;
+}
+
+/* Soft paper texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.42) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.42) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+/* Large dreamy background glow */
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto auto -160px -160px;
+  width: 420px;
+  height: 420px;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(246, 114, 128, 0.28), transparent 68%);
+  filter: blur(8px);
+}
+
+/* Hero card premium effect */
+.hero-content {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.82);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 247, 237, 0.68)),
+    radial-gradient(circle at top left, rgba(246, 200, 95, 0.20), transparent 38%),
+    radial-gradient(circle at bottom right, rgba(246, 114, 128, 0.18), transparent 42%);
+}
+
+/* Small decorative glow inside hero */
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: -90px;
+  right: -90px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(246, 200, 95, 0.24);
+  filter: blur(4px);
+}
+
+.hero-content::after {
+  content: "Friends • Memories • School • Forever";
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 90%;
+  color: rgba(53, 92, 125, 0.28);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.hero-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Soft section depth */
+.timeline-section,
+.carousel-section,
+.gallery-section,
+.message-section {
+  position: relative;
+}
+
+.timeline-section::before,
+.carousel-section::before,
+.gallery-section::before,
+.message-section::before {
+  content: "";
+  position: absolute;
+  inset: 34px 10px;
+  z-index: -1;
+  border-radius: 42px;
+  background: rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 18px 55px rgba(53, 92, 125, 0.08);
+}
